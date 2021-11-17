@@ -1,0 +1,49 @@
+body {
+    background-color: #07F2F2;
+  }
+
+ header h1 {
+    color: #03516E;
+    font-family: 'Stick', sans-serif;
+    font-size:80px;
+    height:100px;
+    background-color: #04DB9E;
+    text-align: center;
+  }
+
+  li {
+    font-family: 'Stick', sans-serif;
+    display: inline;
+    align: center;
+    padding: 6em;
+    border: 10px #04DB9E;
+ }
+
+ main {
+    background-color: #04DB9E;
+    color:  #03516E;
+    font-family: 'Saira Condensed', sans-serif;
+ }
+
+ img {
+     align: center;
+ }
+
+ .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50% ;
+  }
+
+  section {
+    background-color: #04DB9E;
+    color:  #03516E;
+    font-family: 'Saira Condensed', sans-serif;
+ }
+
+ footer {
+    font-family: 'Saira Condensed', sans-serif;
+    text-align: center;;
+    color:  #03516E
+ }
