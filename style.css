@@ -11,12 +11,16 @@ body {
     text-align: center;
   }
 
+  header{
+     text-align: center;
+  }
+
   li {
     font-family: 'Stick', sans-serif;
     display: inline;
-    align: center;
-    padding: 6em;
-    border: 10px #04DB9E;
+    text-align: center;
+    border: solid 10px #04DB9E;
+    padding: 10px;
  }
 
  main {
