@@ -7,6 +7,15 @@ function register() {
     console.log(membersName);
 }
 
+function verifyPicture(){
+    let robot = prompt('Are you a robot?');
+    let url = "https://image.thecrag.com/0x130:4002x1464/fit-in/1200x400/40/73/40735c4d51a5596718cb7a0df8b8022b2366e3a8";
+    if(robot.toUpperCase() == "NO"){
+        document.write('<img src="' + url + '">');
+    } else {
+        window.location.href = "https://seattleboulderingproject.com/";
+    }
+}
 
 // Seattle Rock Climbing Website Gym Waiver Sumbmission Prompt
 
@@ -20,9 +29,9 @@ function formSubmit() {
         document.write(`Waiver NOT Submitted! Please see staff member for assistance or visit other Seattle Climbing Gyms`);
         } 
         return waiverSubmission;
+    }
 
         
-}
 
 
 
