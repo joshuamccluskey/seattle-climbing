@@ -11,6 +11,21 @@ body {
     text-align: center;
   }
 
+  header h2 {
+   color: #03516E;
+   font-size: 45px;
+   font-family: 'Stick', sans-serif;
+   text-align: center;
+ }
+
+ header h3 {
+   color: #03516E;
+   font-size: 30px;
+   font-family: 'Stick', sans-serif;
+   text-align: center;
+ }
+
+
   header{
      text-align: center;
   }
