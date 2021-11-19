@@ -1,48 +1,58 @@
 // Seattle Rock Climbing Website Gym Member Registration Prompt
 
+
+var slideIndex = 0;
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+
+
 function register() {
     let membersName = prompt ("Member Registration: First and Last Name");
-
     document.write(`Welcome ${membersName}!`);
     console.log(membersName);
 }
 
-function verifyPicture(){
-    let robot = prompt('Are you a robot?');
-    let url = "https://image.thecrag.com/0x130:4002x1464/fit-in/1200x400/40/73/40735c4d51a5596718cb7a0df8b8022b2366e3a8";
-    if(robot.toUpperCase() == "NO"){
-        document.write('<img src="' + url + '">');
-    } else {
-        window.location.href = "https://seattleboulderingproject.com/";
-    }
-}
+
 
 // Seattle Rock Climbing Website Gym Waiver Sumbmission Prompt
 
 function formSubmit() {
-    let waiverSubmission = prompt ("Waiver Agreement: The proper climbing and safety training has been provided to you by Seattle Climbing Gym, LLC staff. Seattle Rock Climbing, LLC is not liable for any accident or injury or harm to gym member while participating in rock climbing activities. Please say 'Yes' to confirm and submit waiver or 'No' if you don't agree ");
+    let waiverSubmission = prompt ("Waiver Agreement: \nThe proper climbing and safety training has been provided to you by Seattle Climbing Gym, LLC staff. Seattle Rock Climbing, LLC is not liable for any accident or injury or harm to gym member while participating in rock climbing activities. Please say 'Yes' to confirm and submit waiver or 'No' if you don't agree ");
     console.log(waiverSubmission);
     //Prompts user of waiver agreement decision and submission
     if (waiverSubmission.toLowerCase() == "yes"){
         document.write(`Waiver Submission Completed Climb On!`);
     } else  {
-        document.write(`Waiver NOT Submitted! Please see staff member for assistance or visit other Seattle Climbing Gyms`);
+        document.write(`Waiver NOT Submitted! Please see staff member for assistance`);
         } 
         return waiverSubmission;
     }
 
-        
-
-
 
 function leaveStay(){
-    let defferal = prompt ("Would you like to visit other local Seattle climbing gyms? 'No' Stays on Website 'Yes' - Leaves website to another website"); 
+    let defferal = prompt ("Would you like to finalize your membership? yes/no");
     console.log(defferal);
     //Auto jumps to another website or stays on current website
-    if (defferal.toLowerCase() == "yes") {
+    if (defferal.toLowerCase() == "no") {
         window.location.href = "https://edgeworksclimbing.com/";
     }  else {
-        document.write("Please visit other local gyms!");
+        document.write("Membership finalized Climb On!");
     }
      return defferal;
 }
